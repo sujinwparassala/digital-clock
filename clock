@@ -1,0 +1,15 @@
+from tkinter import *
+import time
+root=Tk()
+def digital():
+    d=time.strftime("%H:%M:%S")
+    clock.config(text=d)
+    clock.after(100,digital)
+#root=Tk()
+root.geometry("500x500")
+#root.backgroundcolor("red")
+root.title("DIGITAL CLOCK")
+clock=Label(root,font=("times",20,"bold"),bg="yellow")
+clock.grid(row=2,column=1,)
+digital()
+root.mainloop()
